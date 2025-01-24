@@ -1,0 +1,1 @@
+//Indica a força da senha gerada
