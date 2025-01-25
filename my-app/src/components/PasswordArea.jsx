@@ -4,15 +4,11 @@ const PasswordArea = ({ password }) => {
     const handleCopyPassword = () => {
         if (password) {
             navigator.clipboard.writeText(password).then(() => {
-                alert('PASSWORD COPIED');
             })
             .catch((err) =>{
                 alert ('ERROR WHEN COPYING PASSWORD');
                 console.error(err);
             });
-        }
-        else {
-            alert ('NO PASSWORD TO COPY');
         }
     };
 
