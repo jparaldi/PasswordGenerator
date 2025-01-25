@@ -20,15 +20,15 @@ const Strength = ({ password }) => {
 
         IntStrength += PWlength;
 
-        if (IntStrength >= ){
+        if (IntStrength >= 20){
             return 'Strong';
         }
 
-        else if (IntStrength > ){
+        else if (IntStrength > 15){
             return 'MEDIUM';
         }
 
-        else if (IntStrength > ){
+        else if (IntStrength > 10){
             return 'WEAK';
         }
 
