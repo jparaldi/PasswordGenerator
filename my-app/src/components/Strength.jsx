@@ -1,12 +1,13 @@
-//Botão de copiar a senha
+//Indica a força da senha gerada
 import React from 'react';
-const PasswordArea = ({ password }) => {
-    console.log(password);
+const Strength = ({ password }) => {
+    const getStrength = (password) => {
+        //IMPLEMENTAR LOGICA DE AVALIAR SENHA
+    };
     return (
         <div>
-            <input type="text" value={password} readOnly placeholder="Your Password will be here" />
+            <p>Strength: {getStrength(password)}</p>
         </div>
     );
 };
-//IMPLEMENTAR O BOTÃO DE COPIAR A SENHA
-export default PasswordArea;
+export default Strength;
