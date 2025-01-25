@@ -4,6 +4,7 @@ export const generatePassword = ({length, hasUpper, hasLower, hasNumber, hasSymb
     const numbers = '0123456789';   
     const symbols = '!@#$%^&*()_+{}:"<>?|[];\',./';
     let all = '';
+    let password = '';
 
     if(hasUpper) all += upper;
     if(hasLower) all += lower;
@@ -13,8 +14,8 @@ export const generatePassword = ({length, hasUpper, hasLower, hasNumber, hasSymb
     if(!all)return "";
 
     for (let i = 0; i < length; i++) {
-        const randomIndex = Math.floor(Math.random() * characters.length);
-        password += characters[randomIndex];
+        const randomIndex = Math.floor(Math.random() * all.length);
+        password += all[randomIndex];
       }
 
     return password;
