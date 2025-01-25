@@ -1,46 +1,12 @@
-//Indica a força da senha gerada
+//Botão de copiar a senha
 import React from 'react';
-const Strength = ({ password }) => {
-    const getStrength = (password) => {
-
-        let IntStrength = 0;
-
-        if (options.hasUpper){
-            IntStrength += 6;
-        }
-        if (options.hasLower){
-            IntStrength += 6;
-        }
-        if (options.hasNumber){
-            IntStrength += 3;
-        }
-        if (options.hasSymbols){
-            IntStrength += 3;
-        }
-
-        IntStrength += PWlength;
-
-        if (IntStrength >= 20){
-            return 'Strong';
-        }
-
-        else if (IntStrength > 15){
-            return 'MEDIUM';
-        }
-
-        else if (IntStrength > 10){
-            return 'WEAK';
-        }
-
-        else {
-            return 'TOO WEAK!'
-        }
-    };
+const PasswordArea = ({ password }) => {
+    console.log(password);
     return (
         <div>
-            <p>Strength: {getStrength(password)}</p>
+            <input type="text" value={password} readOnly placeholder="Your Password will be here" />
         </div>
     );
 };
-
-export default Strength;
+//IMPLEMENTAR O BOTÃO DE COPIAR A SENHA
+export default PasswordArea;
