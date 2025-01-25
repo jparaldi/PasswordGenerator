@@ -24,9 +24,9 @@ const Form = ({ passwordOptions, setPasswordOptions, handleGeneratePassword }) =
     return (
         <form onSubmit={(event) => event.preventDefault()}>
             <label>
-                Password Length
+                Password Length: {passwordOptions.length}
                 <input
-                    type="number"
+                    type="range"
                     name="length"
                     value={passwordOptions.length}
                     onChange={handleChange}
