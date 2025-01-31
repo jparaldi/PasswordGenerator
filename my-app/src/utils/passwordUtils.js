@@ -4,6 +4,7 @@ export const generatePassword = ({length, hasUpper, hasLower, hasNumber, hasSymb
     const numbers = '0123456789';   
     const symbols = '!@#$%^&*()_+{}:"<>?|[];\',./';
     let all = '';
+    let password = '';
 
     if(hasUpper) all += upper;
     if(hasLower) all += lower;
