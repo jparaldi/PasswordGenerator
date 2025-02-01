@@ -1,5 +1,6 @@
 //Botão de copiar a senha
 import React from 'react';
+import copyIcon from '../assets/copy.png';
 const PasswordArea = ({ password }) => {
     const handleCopyPassword = () => {
         if (password) {
@@ -15,8 +16,10 @@ const PasswordArea = ({ password }) => {
     return (
         <div>
             <input type="text" value={password} readOnly placeholder="Your Password will be here" />
-            <button onClick={handleCopyPassword} style={{background: 'none', border : 'none', cursor: 'pointer'}}>
-                <img src='aqui vai ficar o caminho pro ícone do Copy' alt='CopyButton'/>
+            <button onClick={handleCopyPassword} style={{background: 'white', border : 'none', cursor: 'pointer', marginLeft: '20px'}}>
+            <img  src={copyIcon} alt="Copy Button" style={{width: '40px', height: '40px', display: 'block' }} 
+/>
+
             </button>
         </div>
     );
