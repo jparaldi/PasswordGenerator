@@ -14,12 +14,10 @@ const PasswordArea = ({ password }) => {
     };
 
     return (
-        <div>
-            <input type="text" value={password} readOnly placeholder="Your Password will be here" />
-            <button onClick={handleCopyPassword} style={{background: 'white', border : 'none', cursor: 'pointer', marginLeft: '20px'}}>
-            <img  src={copyIcon} alt="Copy Button" style={{width: '40px', height: '40px', display: 'block' }} 
-/>
-
+        <div className='password-area'>
+            <input type="text" value={password} readOnly placeholder="Your Password will be here" className='password-input' />
+            <button onClick={handleCopyPassword} className='copy-button' >
+            <img  src={copyIcon} alt="Copy Button" style={{ width: '45px', height: '45px'}}/>
             </button>
         </div>
     );

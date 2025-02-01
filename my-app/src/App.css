@@ -4,6 +4,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
+    font-size: large;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,21 +16,22 @@ body {
 
 form {
     background: linear-gradient(145deg, #1e1e1e, #232323);
-    box-shadow: 10px 10px 20px #0f0f0f, -10px -10px 20px #292929;
+    box-shadow: 10px 10px 20px #0f0f0f;
     border-radius: 16px;
     padding: 20px;
     width: 320px;
     color: #d1d5db; 
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 label {
     font-size: 14px;
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
 }
 
 input[type="range"] {
@@ -75,46 +77,48 @@ button:hover {
     box-shadow: 0 8px 15px rgba(134, 239, 172, 0.4);
 }
 
-/* Password Area */
+input:focus, button:focus {
+    outline: 2px solid #86efac;
+    outline-offset: 2px;
+}
+
 .password-area {
+    align-items: center;
+    width: 100%;
     margin-top: 20px;
     display: flex;
-    align-items: center;
-    gap: 10px;
-    position: relative; /*  posicionamento do ícone */
+    background: transparent;
+    border: 1px solid #86efac;
+    border-radius: 8px;
+    padding: 0;
+    margin-bottom: 10px;
 }
 
 .password-area input[type="text"], .password-input {
     flex: 1;
     padding: 10px;
-    padding-right: 40px; /* espaço extra a direita para o ícone */
-    border-radius: 8px;
-    border: 1px solid #444;
-    background: #1e1e1e;
-    color: #fff;
+    background: transparent;
+    border: none;
+    color: white;
     outline: none;
-    font-size: 14px;
-    height: 45px; /* Aumenta a altura do input */
+    font-size: 17px;
+    height: 35px;
+    outline: none;
 }
 
-/* botão de copiar dentro do campo */
-.password-area button.copy-button {
-    background: none;
+.copy-button {
+    background: #86efac;
     border: none;
     cursor: pointer;
-    position: absolute; /* poe o botao no canto */
-    right: 10px; /* espaço entre o ícone e a borda do input */
-    top: 50%; /* Posiciona o ícone verticalmente no centro */
-    transform: translateY(-50%); /* Ajusta o alinhamento para o centro  */
+    display: flex;
+    gap: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.password-area button.copy-button .material-icons {
-    font-size: 24px;
-    color: #86efac;
-}
-
-input:focus, button:focus {
-    outline: 2px solid #86efac;
-    outline-offset: 2px;
+.copy-button img {
+    width: 1000px;
+    height: 1000px;
 }
   
